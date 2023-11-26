@@ -1,2 +1,2 @@
 # neubauerseth.github.io
-## Hello my Name is Seth
+## my personal website
