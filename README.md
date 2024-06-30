@@ -1,4 +1,4 @@
-Hello, this is my personal website that I have created using html,CSS, and a little java script.
+Hello, this is my personal website that I have created using html, CSS, and a little java script.
 
 Feel free to check out my website: neubauerseth.github.io
 
