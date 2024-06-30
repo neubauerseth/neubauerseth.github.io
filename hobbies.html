@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Google Fonts links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Icons Links-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><h1 class="site-title">Seth Neubauer</h1></a>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobbies.html" class="active">Hobbies</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/sethneubauer/" target="_blank"><i class='bx bxl-linkedin-square'></i></a></li>
+                <li><a href="https://github.com/neubauerseth" target="_blank"><i class='bx bxl-github'></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sports</h2>
+            <p> I've played sports all my life, including soccer, basketball, pickleball, tennis, and golf, to name a few. 
+                I've always enjoyed being active and playing sports."
+            </p>    
+        </section>
+
+        <section>
+            <h2>Photography</h2>
+            <p> I've enjoyed taking pictures since I was a kid, capturing anything I thought was "cool", from sunsets and sunrises to cars, 
+                buildings, and nature. I've always enjoyed capturing moments so that I can look back at them in the future. 
+                Recently, I've taken a particular interest in photographing landscapes, 
+                as it brings a sense of peace and calmness without any individuals in the photos.
+            <div class="full-image" id="fullImageBox">
+                <img src="images/Website Profile Picture.png" id="fullImage">
+                <span onclick="closeFullImage()">X</span>
+            </div>
+            
+            <div class="image-gallery">
+                <img src="images/Photography Photos/WPimg01.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/ Photos/WPimg02.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg03.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg04.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg05.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg06.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg07.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg08.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg09.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/ Photos/WPimg10.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg11.png" onclick="openFullImage(this.src)">
+                <img src="images/Photography Photos/WPimg12.png" onclick="openFullImage(this.src)">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Film/Youtube</h2>
+            <p> Within the last few years, I have enjoyed filming and editing videos for friends and family. 
+                I enjoy the entire process of creating a video from start to finish. 
+                The editing process is something I truly enjoy, as it allows me to put my own twist on things, 
+                giving me the opportunity to let my creativity take over. 
+                Once I finish a video, I enjoy the satisfaction of being able to share it with friends and family.
+            </p>
+        </section>
+
+        <!-- Script for clickable photos link: https://www.youtube.com/watch?v=sHG3Sf6XN9g -->
+        <script>
+            var fullImageBox = document.getElementById("fullImageBox");
+            var fullImage = document.getElementById("fullImage");
+
+            function openFullImage(pic) {
+                fullImageBox.style.display = "flex";
+                fullImage.src = pic;
+            }
+
+            function closeFullImage() {
+                fullImageBox.style.display = "none";
+            }
+        </script>
+    </main>
+
+    
+    <footer class="footer">
+        <hr>
+        <p>Seth Neubauer 2024</p>
+    </footer>
+</body>
+</html>

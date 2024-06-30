@@ -1,0 +1,342 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Font Family Section */
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    background-color: #004BA8;
+    color: white;
+    font-family: kanit;
+}
+
+/* Icon Size Section */
+.bx {
+    font-size: 24px;
+}
+
+/* Header Section */
+.site-title {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+a[href="index.html"] {
+    text-decoration: none;
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white; 
+}
+
+.site-nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-nav li a.active {
+    color: #21A179;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Profile Picutre Section */
+.profile {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    height: 50vh; /* Take up the full height of the viewport */
+}
+
+.profile img {
+    width: 500px; /* Increase the size of the image */
+    height: 500px; /* Increase the size of the image */
+    border-radius: 50%; /* This will make the image circular */
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.profile p {
+    max-width: 600px;
+    text-align: center; /* Center the text */
+}
+
+/* Resume text alginment */
+.right-aligned {
+    margin-left: auto;
+    margin-right: 0;
+    width: 700px; /* Adjust this width as needed */
+    word-wrap: break-word;
+}
+
+.view-classes {
+    color: white; /* Default color */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.view-classes:hover {
+    color: #21A179; /* Color on hover */
+}
+
+.resume-header h2 {
+    font-size: 60px; /* Adjust the font size as needed */
+    margin-left: 0; /* Keep it on the left */
+    margin-right: 0;
+    width: auto; /* Change width to auto to avoid forcing it to span the full width */
+    margin-top: 0px; /* Adjust this value as needed to align with the Education header */
+    margin-bottom: 0px; /* Adjust this value as needed to align with the Education header */
+    position: relative; /* Use relative positioning */
+    top: 100px; /* Move down by 20px, adjust as needed */
+    left: 150px; /* Move to the right by 50px, adjust as needed */
+}
+
+
+/* Classes page */
+.courses-header {
+    font-size: 65px; /* Or any other size */
+}
+
+.two-column-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts the space between the two columns */
+}
+
+.column1, .column2 {
+    flex-basis: 48%; /* Adjusts the base size of each column to take up less than half of the container width */
+    /* Add more styling here as needed */
+}
+
+/* accordion section */
+.accordion-toggle {
+    font-size: 24px; /* Increase font size */
+    padding: 10px 20px; /* Add padding around the text for a larger clickable area */
+    cursor: pointer; /* Change cursor to pointer on hover to indicate it's clickable */
+    /* Add any additional styling here */
+    position: relative; /* Ensure positioning context for pseudo-elements */
+}
+
+.accordion-toggle::after {
+    content: " ▼"; /* Unicode arrow */
+    font-size: 0.8em; /* Adjust size as necessary */
+    position: absolute; /* Position the arrow relative to its toggle */
+    right: 20px; /* Position the arrow on the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+}
+
+.accordion-toggle.active::after {
+    content: " ▲"; /* Change to up arrow when active */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content ul ul { /* Targeting <ul> elements within <ul> inside .accordion-content */
+    margin-bottom: 20px; /* Adjust the value as needed to increase space */
+}
+
+.accordion-toggle.active + .accordion-content {
+    max-height: 1000px; /* Adjust as necessary */
+}
+
+
+/* .resume-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-title {
+    /* Adjust the size and style of the title as needed 
+    font-size: 2em;
+    margin-right: 50px; /* Add some space between the title and the accordions 
+}
+
+.accordion-sections {
+    /* Adjust the width as needed 
+    width: 70%;
+} */
+
+/* .accordion-button.active + .accordion-content {
+    max-height: 1000px; /* This will expand the content when the button is active, delete this line when in use
+}  */
+
+/* Image Gallery Section */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.image-gallery img{
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.image-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rbga(68,77,136,0.2);
+}
+.full-image{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-image img{
+    width: 90%;
+    max-width: 500px;
+    margin: 0;
+}
+
+.full-image span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Projects Section */
+.project-content {
+    display: flex; /* Aligns children (img and .project-info) side by side */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Adds space between the img and .project-info */
+}
+
+.project-content img {
+    width: 100%; /* Adjust based on your preference */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for transform changes */
+}
+
+.project-content img:hover {
+    transform: translateY(-5px) scale(1.05); /* Moves the image up and scales it up slightly */
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column; /* Stacks the title and description vertically */
+    justify-content: center; /* Centers the content vertically */
+    width: 60%; /* Adjust based on your preference */
+}
+
+.project-info h3 {
+    font-size: 36px; /* Adjust the size as needed */
+    margin-bottom: 10px; /* Adds space between the title and description */
+}
+
+.project-info p {
+    margin-top: 10px; /* Reduce the top margin */
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    align-items: center; /* This will vertically center the items */
+    justify-content: space-around; /* This will distribute the items evenly */
+}
+
+/* Contact Me Section */
+.contact-content {
+    display: flex;
+    justify-content: space-between; /* Adjusts alignment to distribute space evenly */
+    align-items: center; /* Keeps items vertically centered */
+    gap: 20px; /* Adds space between the form and the image */
+    margin-top: 0px; /* Adjust if needed */
+    margin-bottom: 0px; /* Adjust if needed */
+    font-size: 25px;
+}
+
+.contact-title h2 {
+    font-size: 60px;
+    margin: 0 auto; /* Centers the title horizontally */
+    margin-bottom: 10px; /* Reduced bottom margin to bring the info closer */
+    position: relative;
+    top: 20px; /* Adjust as needed */
+    left: 125px;
+}
+
+.heading h2 {
+    margin-top: 0px; /* Reduces the top margin of the first h2 element inside .contact-info */
+    margin-bottom: -100px;
+}
+
+.form {
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-top: 0px;
+    max-width: 60%;
+}
+
+.contact-image {
+    width: 30%;
+    height: auto;
+    margin-right: 50px;
+}
+
+.email-text, .number-text {
+    font-size: 35px;
+    color: white !important;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0;
+    margin-bottom: 0; /* Add this line */
+    padding-top: 50px; /* Add this line */
+}
+
+.footer hr {
+    width: 100%; /* This will make the line span the full width of the page */
+}

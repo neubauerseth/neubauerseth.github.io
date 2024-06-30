@@ -1,0 +1,177 @@
+here will be all my half started projects that I couldnt figure out how to finish so for now they will just remain in this file
+
+resume.html sections
+    <section>
+        <div class="accordion">
+            <button class="accordion-button">Education</button>
+            <div class="accordion-content education-content">
+                <div class="education-detail">
+                    <p><strong>Pioneer Highschool - Ann Arbor, MI</strong></p>
+                    <p>2020 Mens Soccer District Champions</p>
+                    <p>Duration: 2017 - 2021</p>
+                    <p>Cumulative GPA: 3.70</p>
+                </div>
+                
+                <div class="education-detail">
+                    <p><strong>Michigan State University - E.Lansing, MI</strong></p>
+                    <p>Bachelor of Science in Computer Science</p>
+                    <p>Expected Graduation: December 2025</p>
+                    <p>Cumulative GPA: 3.46</p>
+                </div>
+    
+                <div class="education-detail">
+                    <p><strong>Vrije Universiteit Amsterdam - Amsterdam, NL</strong></p>
+                    <p>Study Abroad Program for 2024 Spring Semester</p>
+                    <p>Duration: February 2024 - June 2024</p>
+                    <p>Computer Science</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="accordion">
+            <button class="accordion-button">Work Experience</button>
+            <div class="accordion-content work-content">
+                <div class="work-detail">
+                    <p><strong>Whole Foods - Ann Arbor, MI</strong></p>
+                    <p>Position: Grocery Team Member</p>
+                    <p>Duration: June 2022 - August 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion-button");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+
+
+CSS Accordion 
+/* Accordion Section */
+
+.accordion {
+    width: 80%; /* Adjust this value to control the width of the accordion */
+    margin: 0 auto; /* This will center the accordion */
+    text-align: left; /* This will align the text to the left */
+}
+
+.accordion-button {
+    cursor: pointer;
+    width: 100%; /* This will make the button take up the full width of the accordion */
+    padding: 15px; /* This will add some space around the button text */
+    text-align: left; /* This will align the button text to the left */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 100%; /* This will make the content take up the full width of the accordion */
+    padding: 15px; /* This will add some space around the content */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+NEW accordion seciotn 6/28/2024
+.accordion-toggle {
+    font-size: 24px; /* Increase font size */
+    padding: 10px 20px; /* Add padding around the text for a larger clickable area */
+    cursor: pointer; /* Change cursor to pointer on hover to indicate it's clickable */
+    /* Add any additional styling here */
+    position: relative; /* Ensure positioning context for pseudo-elements */
+}
+
+.accordion-toggle::after {
+    content: " ▼"; /* Unicode arrow */
+    font-size: 0.8em; /* Adjust size as necessary */
+    position: absolute; /* Position the arrow relative to its toggle */
+    right: 20px; /* Position the arrow on the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+}
+
+.accordion-toggle.active::after {
+    content: " ▲"; /* Change to up arrow when active */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-toggle.active + .accordion-content {
+    max-height: 1000px; /* Adjust as necessary */
+}
+
+CSS Project Section
+.projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.projects-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    /* Responsive adjustment */
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2,1fr); /* 2 columns for tablets and below */
+    }
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; /* 1 column for small devices */
+    }
+}
+
+.project-card {
+    position: relative;
+    height: 30rem;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-card:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
+}
+
+HTML Project section card thing
+<div class="projects-items">
+            <!-- Maize FC-->
+            <a href="https://github.com/TrickWithATwist/Campus-Cuisine" target = "_blank" class="single">
+                <div class="project-card">
+                    <img src="Campus Cuisine App Logo.png" alt="Maize FC Website">
+                    <div class="card-overlay"></div>
+                </div>
+                <p class="proj-title">Campus Cuisine</p>
+                <p class="proj-desc">Finding cheap/affordable options for college students on their Campus</p>
+            </a>
+        </div>

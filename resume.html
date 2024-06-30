@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Google Fonts links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Icons Links-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><h1 class="site-title">Seth Neubauer</h1></a>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html"class="active">Resume</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/sethneubauer/" target="_blank"><i class='bx bxl-linkedin-square'></i></a></li>
+                <li><a href="https://github.com/neubauerseth" target="_blank"><i class='bx bxl-github'></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="resume-header">
+        <h2>My Resume</h2>
+    </section>
+    
+    <section class="right-aligned">
+        <h2 class="accordion-toggle">Education</h2>
+        <div class="accordion-content">
+            <ul>
+                <li>
+                    <strong>Michigan State University - E.Lansing, MI</strong>
+                    <ul>
+                        <li>Bachelor of Science in Computer Science</li>
+                        <li>Expected Graduation: December 2025</li>
+                        <li>Cumulative GPA: 3.46</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Vrije Universiteit Amsterdam - Amsterdam, NL</strong>
+                    <ul>
+                        <li>Study Abroad Program for 2024 Spring Semester</li>
+                        <li>Duration: February 2024 - June 2024</li>
+                        <li>Computer Science</li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="classes.html" class="view-classes">View My Classes</a>
+        </div>
+    </section>
+
+    <section class="right-aligned">
+        <h2 class="accordion-toggle">Work Experience</h2>
+        <div class="accordion-content">
+            <ul>
+                <li>
+                    <strong>Whole Foods - Ann Arbor, MI</strong>
+                    <ul>
+                        <li>Position: Grocery Team Member</li>
+                        <li>Duration: June 2022 - August 2022</li>
+                        <li>Description:
+                            <ul>
+                                <li>Collaborated daily with a team of 5 through verbal and written communication 
+                                    to ensure store efficiency and satisfaction.</li>
+                                <li>Entrusted with the task of unloading and labeling supplies to maintain flow of the store, 
+                                    time management, and organization.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="right-aligned">
+        <h2 class="accordion-toggle">Extracurricular activities/Clubs</h2>
+        <div class="accordion-content">
+            <ul>
+                <li>
+                    <strong>Michigan Scholars Program - E.Lansing, MI</strong>
+                    <ul>
+                        <li>Duration: September 2023 - Present</li>
+                        <li>Description:
+                            <ul>
+                                <li>Program aimed at promoting recruitment within the electric vehicle and mobility sectors, facilitating connections between aspiring engineering students passionate about EV and mobility with companies in the field.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Artificial Intelligence Club - E.Lansing, MI</strong>
+                    <ul>
+                        <li>Member</li>
+                        <li>Duration: January 2023 - Present</li>
+                        <li>Description:
+                            <ul>
+                                <li>Built an AI Jukebox through a GitHub repository, enabling users to customize song lyrics and select their preferred artist for vocal rendition.</li>
+                                <li>Worked with a team of 3 to design and implement a multi-layer perceptron using Google Colab, predicting survival probabilities with a 95% accuracy rate based on specific health conditions using a dataset from Kaggle.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Multi Racial Unity Living Experience - E.Lansing, MI</strong>
+                    <ul>
+                        <li>Member</li>
+                        <li>Duration: January 2023 - December 2023</li>
+                        <li>Description:
+                            <ul>
+                                <li>Participated in weekly group discussions to foster a cohesive and inclusive community, engaging diverse perspectives and promoting respectful dialogue.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+
+    <!--Accordion JavaScript (Add this before the closing body tag)-->
+    <script>
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+        
+                button.classList.toggle('active');
+                if (button.classList.contains('active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <hr>
+        <p>Seth Neubauer 2024</p>
+    </footer>
+</body>
+</html>
+
+
+<!--
+Linkedin: https://www.linkedin.com/in/sethneubauer/
+GitHub: https://github.com/neubauerseth
+
+<p>Michigan State Univeristy  -- E.Lansing, Mi || Bachelor of Science, Computer Science ||  May 2025 || GPA: 3.46 </p>
+<ul>
+    <li>Introduction to Programming I (Python) || CSE 231</li>
+    <li>Introduciton to Programming II (C++) || CSE 232</li>
+    <li>Discrete Structures Comp Sci || CSE 260</li>
+    <li>Algorithms and Data Structures || CSE 331</li>
+    <li>Comp Organizations and Arch || CSE 320 </li>
+    <li>Ethics and Pro Issues in CS || CSE 300</li>
+    <li>Multivariable Calculus || MTH 234</li>
+    <li>Matrix Algebra I || MTH 314</li>
+    <li>Calculus II || MTH 133</li>
+    <li>Calculus I || MTH 132</li>
+    <li>Algorithmic Thinking/Programming || CSE 102</li>
+    <li>Appl Biomedical Scinences || ISB 204</li>
+    <li>Society and the Individual || ISS 210</li>
+    <li>College Algebra & Trigonometry || MTH 116</li>
+    <li>Writing as Inquiry || WRA 101</li>
+    <li>U.S. & The World || IAH 201</li>
+    <li>Intro To Engineering Design || EGR 100</li>
+    <li>IS Biology Lab || ISB 208L</li>
+    <li>Physics Scientist & Engineers I || PHY 183</li>
+    <li>Film and Culture || IAH 241G</li>
+    <li>Evaluating Evidence- SC || ISS 305</li>
+</ul>
+
+<p>Vrije Universiteit Amsterdam -- Amsterdam, NL || Study Abroad Program, Computer Science ||  Feb 2024 - Jun 2024</p>
+<ul>
+    <li>Text Mining for AI || XB_0085</li>
+    <li>Automata and Complexity || X_401049</li>
+    <li>Computational Intelligence || XB_0025</li>
+    <li>Information Management for CS || XB_0087</li>
+</ul>
+
+<p>Whole Foods -- Ann Arbor, MI || Grocery Team Member || Jun 2022 - Aug 2022 </p>
+<ul>
+    <li>Collaborated daily with a team of 5 through verbal and written
+            communication to ensure store efficiency and satisfaction.
+    </li>
+    
+    <li>Entrusted with the task of unloading and labeling supplies to
+            maintain flow of the store, time management, and organization.
+    </li>
+</ul>
+
+<p>Garage Reconstruction || Jun 2023 - Aug 2023 || This doesnt really count as work experience</p>
+<ul>
+    <li>
+        Helped a neighbor rebuild their garage over the summer, learned communication and  
+    </li>
+</ul>
+
+<p>Computational Intelligence -- Amsterdam, NL || DESCRIPTION || Feb 2022 - Jun 2024 </p>								
+<ul>
+    <li>
+        Compiled weekly assignments using Python in Visual Studio Code, leveraging advanced concepts such as gradient-based
+        and derivative-free optimization, evolutionary algorithms, reinforcement learning, neural networks, and
+        neuroevolution. 
+    </li>
+</ul>
+
+<p>Algorithms and Data Structures -- E.Lansing, MI || DESCRIPTION || Sep 2023 - Dec 2023 </p>
+<ul>
+    <li>
+        Bi-weekly projects to apply various sorting algorithms, including insertion sort, merge sort, and quicksort, reinforcing
+        concepts of growth functions, recurrences, and recursion, enhancing problem-solving skills in algorithm design and analysis. 
+    </li>
+    <li>
+        Created a Python project using PyCharm to implement AVL Tree sorting, integrating Binary Search Trees to ensure
+        balanced data and maintain a low time complexity during compilation.
+    </li>
+</ul>
+
+<p>Campus Cuisine -- E.Lansing, MI || DESCRIPTION || Aug 2023 - Aug 2023 </p>
+<ul>
+    <li>
+        Facilitated a group of 5 to build an IOS app using Swift, X code, and Keynote designed to enhance dining experiences,
+        filtering nearby restaurants based on user preferences like price and cuisine. 
+
+    </li>
+    <li>
+        Led a group of 5 to develop the app’s foundational interface, encompassing design, color, and layout, while also undertaking
+        the complete coding process starting from scratch. 
+
+    </li>
+</ul>
+
+<p>Word Comparer Analyzer -- E.Lansing, MI || DESCRIPTION || Jan 2023 - May 2023 </p>
+<ul>
+    <li>
+        Designed and implemented a highly efficient C++ program using functions, pointers, and references in Codio, given two
+        words successfully extracting which word appears first and displaying the number of times each word occurred. 
+
+    </li>
+</ul>
+
+<p>Custom Calendar Creator -- E.Lansing, MI || DESCRIPTION || Jan 2023 - May 2023 </p>
+<ul>
+    <li>
+        Compiled a custom Python calendar in Spyder (Anaconda 3) that utilizes dictionaries and lists to enable users to add,
+        delete, and list events for specific dates, with a focus on robust exception handling for program stability 
+        and user-friendliness.
+    </li>
+</ul>
+
+<p>Michigan Scholars Program -- E.Lansing, MI || DESCRIPTION || Sep 2023 - Present </p>
+<ul>
+    <li>
+        Program aimed at promoting recruitment within the electric vehicle and mobility sectors, facilitating connections between
+        aspiring engineering students passionate about EV and mobility with companies in the field.
+    </li>
+</ul>
+
+<p>Multi Racial Unity Living Experience -- E.Lansing, MI || member || DESCRIPTION || Jan 2023 - Present </p>
+<ul>
+    <li>
+        Participated in weekly group discussions to foster a cohesive and inclusive community, engaging diverse perspectives and
+        promoting respectful dialogue.
+
+    </li>
+</ul>
+
+<p>Artifical Intelligence Club -- E.Lansing, MI || member || DESCRIPTION || Jan 2023 - Present </p>
+<ul>
+    <li>
+        Built an AI Jukebox through a GitHub repository, enabling users to customize song lyrics and select their preferred 
+        artist for vocal rendition.
+    </li>
+    <li>
+        Worked with a team of 3 to design and implement a multi-layer perceptron using Google Colab, predicting survival
+        probabilities with a 95% accuracy rate based on specific health conditions using a dataset from Kaggle.
+    </li>
+</ul>
+-->
