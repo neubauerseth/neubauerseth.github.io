@@ -24,6 +24,31 @@ body{
     font-family: kanit;
 }
 
+/* Screen Adjustment Section */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .site-nav ul {
+        padding: 0;
+    }
+    .site-nav li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 767px) { /* CSS Media Query for mobile phones */
+    .site-nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .site-nav li {
+        margin-bottom: 15px;
+    }
+    .project-content {
+        flex-direction: column;
+    }
+}
+
 /* Icon Size Section */
 .bx {
     font-size: 24px;
